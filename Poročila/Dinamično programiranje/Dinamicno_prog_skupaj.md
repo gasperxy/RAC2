@@ -1,4 +1,5 @@
 <h1 align="center"> Vaje 1 </h1>
+
 ## Datum: 15.2.
 
 ___
@@ -20,6 +21,7 @@ verižni seznam | O(1)/O(n)|O(1)/O(n)|O(1)/O(n)|O(n)|O(n)|O(1)/O(n)|O(1)/O(n)|O(
 
 ___
 ___
+
 ## <ins>Žabica</ins>
 
 $muhe[i]$ = število muh na i-tem mestu
@@ -50,9 +52,11 @@ Izračunati moramo vsa stanja:
 
 ___ 
 ___
+
 <br>
 
 <h1 align="center"> Vaje 2 </h1>
+
 ## Datum: 22.2.
 ___
 ___
@@ -76,6 +80,7 @@ $
     tako da $\sum\limits_{i=1}^n v_i \cdot x_i \leq W$ in $\sum\limits_{i=1}^n c_i \cdot x_i$ maksimalna možna
 
 ____
+
 $G(i,w)=$ maksimalna vrednost  nahrbnika, z predmeti $1,\dots,i$ in velikostjo $w$.
 
 $G(i,w)= max(G(i-1,w),G(i-1,w-v_i) + c_i)$\
@@ -91,6 +96,7 @@ $Z_i \dots$ "$S_{i-1} \ddagger (v_i,c_i)$"\
 $S_i \dots$ "zlitje $S_{i-1}$ in $Z_i$"
 ___
 ___
+
 ## Primer
 ### <ins>Vprašanje 1 </ins>
 ```
@@ -220,6 +226,7 @@ print(rez)
 ```
 ---
 ---
+
 <br>
 
 <h1 align="center"> Vaje 3 </h1>
@@ -243,6 +250,7 @@ def optimalni_tovor(predmeti, W):
     return najboljsi(len(predmeti),W)
 ```
 ---
+
 ## Naloga 2
 
 *Implementiraj funkcijo `optimalni_predmeti(predmeti, W)`, ki vrne seznam predmetov ki dosežejo največjo vrednost, če lahko na letalo natovorimo skupno težo največ `W`. Če je možnosti več, vrni katerokoli.*
