@@ -1,13 +1,14 @@
-# <center> Vaje 1 </center>
+<h1 align="center"> Vaje 1 </h1>
 ## Datum: 15.2.
+
 ___
 ___
 
 ## <ins>Časovna zahtevnost</ins>
 
-Kaj pomeni $ f \in O(g)$ za neki funkciji $ f,g: \mathbb{N} \to  \mathbb{R}^{+}$ ?
+Kaj pomeni $f \in O(g)$ za neki funkciji $f,g: \mathbb{N} \to  \mathbb{R}^{+}$ ?
 
-$f \in O(g) \iff \exists c \ \exists n_{0}: \forall n \geq n_{0},\ f(n) \leq c \ast g(n) $
+$f \in O(g) \iff \exists c \ \exists n_{0}: \forall n \geq n_{0},\ f(n) \leq c \ast g(n)$
 
 <img src=graf_prvi.png  width="60%" height="60%"> 
 
@@ -25,13 +26,14 @@ $muhe[i]$ = število muh na i-tem mestu
 
 `žabica(i,e)` = to je minimalno število skokov, da pridemo iz močvirja, če se nahajamo na `i`-tem  lokvanu in imamo `e` energije
 
-$žabica(i,e) = 1 + \left\{
+$$
+žabica(i,e) = 1 + \left\{
 \begin{array}{ll}
 0 &\text{, če } i + e > n \\ 
 \min\limits_{d \in(1, \dots,e)}(žabica(i+d,e-d+muhe[i+d])) &\text{, sicer}
 \end{array} 
 \right.
-$
+$$
 
 ### *Robni pogoji*: 
     
@@ -50,7 +52,7 @@ ___
 ___
 <br>
 
-# <center> Vaje 2 </center>
+<h1 align="center"> Vaje 2 </h1>
 ## Datum: 22.2.
 ___
 ___
@@ -177,6 +179,7 @@ Torej $x = [1,1,1,1,0,0,1,1,1]$
 
 ___
 ___
+
 ## <ins>Naloga 2</ins>
 
 seznam = $[3,34,4,12,5,2]$, $S=9$ <br>
@@ -219,7 +222,7 @@ print(rez)
 ---
 <br>
 
-# <center> Vaje 3 </center>
+<h1 align="center"> Vaje 3 </h1>
 
 ## Datum: 1.3.
 ___
@@ -272,6 +275,7 @@ def optimalni_predmeti(predmeti, W):
     return selected
 ```
 ---
+
 ## Naloga 3
 
 *Trgovec je dobil dodatno pošiljko obstoječih predmetov. Tako ima sedaj na razpolago več kot en predmet posameznega tipa. Predmete tako predstavimo s seznamom elementov oblike
@@ -289,6 +293,7 @@ def optimalni_tovor_zaloga(predmeti, W):
     return optimalni_tovor(nova,W)
 ```
 ___
+
 ## Naloga 4
 
 Predpostavi, da ima sedaj trgovec na voljo neomejeno zalogo posameznih predmetov. implementiraj funkcijo `neomejena_zaloga(predmeti, W)`, ki vrne najvišjo skupno ceno tovora na letalu z maksimalno nosilnostjo `W`
@@ -305,9 +310,10 @@ def neomejena_zaloga(p,W):
 
 ---
 ---
+
 <br>
 
-# <center> Vaje 4 </center>
+<h1 align="center"> Vaje 4 </h1>
 
 ## Datum: 8.3.
 ___
@@ -328,7 +334,7 @@ ___
 - $N(i,j) = \min\limits_{i \le k <j}\{N(i,k)+N(k+1,j) + d_{i} \cdot d_{k+1} \cdot d_{j}\}$
 
 ### Primer:
-| |1<br>$3\times 5$|2<br>$5\times 4$|3<br>$4\times 2$|4<br>$ 2\times 3$ |5<br>$ 3\times 5$ |6<br>$ 5\times 4$ |7<br>$ 4\times 6$ |8<br>$ 6\times 3$ |
+| |1<br>$3\times 5$|2<br>$5\times 4$|3<br>$4\times 2$|4<br>$2\times 3$ |5<br>$3\times 5$ |6<br>$5\times 4$ |7<br>$4\times 6$ |8<br>$6\times 3$ |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--:|
 $3\times 5$|  $0$| $60$ | $70_{1}$|$88_{3}$ |$130_{3}$ |$164_{3}$|$224_{3}$|$242_{3}$|
 $5\times 4$ |  | $0$| $40$|$70_{3}$|$120_{3}$|$150_{3}$|$218_{3}$|$224_{3}$|
@@ -436,7 +442,7 @@ ___
 ___
 <br> 
 
-# <center> Časovna zahtevnost </center>
+<h1 align="center"> Časovna zahtevnost </h1>
 
 ## Koda
 ```
