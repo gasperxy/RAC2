@@ -29,12 +29,11 @@ $muhe[i]$ = število muh na i-tem mestu
 `žabica(i,e)` = to je minimalno število skokov, da pridemo iz močvirja, če se nahajamo na `i`-tem  lokvanu in imamo `e` energije
 
 $$
-žabica(i,e) = 1 + \left\{
-\begin{array}{ll}
-0 &\text{, če } i + e > n \\ 
-\min\limits_{d \in(1, \dots,e)}(žabica(i+d,e-d+muhe[i+d])) &\text{, sicer}
-\end{array} 
-\right.
+žabica(i,e) = 1 + \left \\{ \begin{array}{ll}
+0 & \text{, če } i + e > n \\ 
+\min \limits_{d \in (1, \dots,e)}(žabica(i+d,e-d+muhe[i+d])) & \text{, sicer}
+\end{array}
+\right. 
 $$
 
 ### *Robni pogoji*: 
@@ -69,15 +68,15 @@ Vhod:
 
 Izhod:
 
-- $ x = (x_1,\dots,x_n); \ x_i = \left\{
+$$x = (x_1,\dots,x_n); \ x_i = \left \\{
 \begin{array}{ll}
 1 &\text{, vzamemo i-ti predmet} \\ 
 0 &\text{, sicer}
 \end{array} 
 \right.
-$
+$$
 
-    tako da $\sum\limits_{i=1}^n v_i \cdot x_i \leq W$ in $\sum\limits_{i=1}^n c_i \cdot x_i$ maksimalna možna
+tako da $\sum\limits_{i=1}^n v_i \cdot x_i \leq W$ in $\sum\limits_{i=1}^n c_i \cdot x_i$ maksimalna možna
 
 ____
 
@@ -339,7 +338,7 @@ ___
 
 ### Bellmanova enačba oz. rekurzivna zveza:
 - $N(i,j)$ = minimalno število množenj realnih števil za izračun produkta matrik $A_{i} \cdot A_{i+1} \cdots A_{j}$
-- $N(i,j) = \min\limits_{i \le k <j}\{N(i,k)+N(k+1,j) + d_{i} \cdot d_{k+1} \cdot d_{j}\}$
+- $N(i,j) = \min \limits_{i \le k < j} \Big( N(i,k) + N(k+1,j) + d_{i} \cdot d_{k+1} \cdot d_{j} \Big)$
 
 ### Primer:
 | |1<br>$3\times 5$|2<br>$5\times 4$|3<br>$4\times 2$|4<br>$2\times 3$ |5<br>$3\times 5$ |6<br>$5\times 4$ |7<br>$4\times 6$ |8<br>$6\times 3$ |
@@ -375,7 +374,7 @@ $N(6,8)=min(0+72+5\cdot4\cdot3,\ 120+0+5\cdot6\cdot3)=132$
 $O(i,j)=število \ optimalnih \ produktov \ matrik \ A_{i}\cdot A_{i+1}\cdots A_{j}$
 
 
-$O(i,j)=\sum\limits_{k \in N(i,j)[1]\sim idx} O(i,k)\cdot O(k+1,j)$
+$O(i,j) = \sum \limits_{k \in N(i,j)[1] \sim idx} O(i,k) \cdot O(k+1,j)$
 
 Časovna zahtevnost $O(n^3)\ \dots \ $($n^2$-število stanj, $n$-izračun stanja)
 
