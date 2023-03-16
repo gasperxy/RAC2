@@ -87,7 +87,6 @@ def test_gen_sez(n):
 if __name__ == '__main__':
     print("Starting")
     #primerjava iterativne zabice in zabice z rekurzijo
-    primerjava_algoritmov([Zabica.zabica, Zabica.zabica_iter], test_gen_sez, [i for i in range(20)])
-    #Izpišimo še čas za zabica z rekurzijo
-    print(izpisi_case(Zabica.zabica, test_gen_sez, [i for i in range(20)]))
+    #primerjava_algoritmov([Zabica.zabica, Zabica.zabica_iter], test_gen_sez, [i for i in range(70)])
+    narisi_in_pokazi_graf(Zabica.zabica_iter, test_gen_sez, [i for i in range(200)])
     print("Done")

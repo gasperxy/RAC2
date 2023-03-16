@@ -14,13 +14,13 @@ Vse vaje se nahajajo v folderju <i> Vaje1-4 </i>
 
 **Datum:** 15.02.2023
 
-Reševali smo dinamične probleme na Tomotu. Cilj vaj je bil, da smo rešili vsaj eno nalogo rekurzivno in eno z bottoms-up pristopom. Glej ```Vaje1\Vaje1.pdf``` in ```Vaje1\Zabica.py```.
+Reševali smo dinamične probleme na Tomotu. Cilj vaj je bil, da smo rešili vsaj eno nalogo rekurzivno in eno z bottoms-up pristopom. Glej ```Zapiski_vaj``` in ```Vaje1\Zabica.py```.
 
 ## Vaje 2
 
 **Datum:** 22.02.2023
 
-Ogledali smo si problem 0/1 nahrbtnika. Glej ```Vaje2\Vaje2.pdf```.
+Ogledali smo si problem 0/1 nahrbtnika. Glej ```Zapiski_vaj```.
 
 ## Vaje 3
 
@@ -30,9 +30,9 @@ Reševali smo problem 0/1 nahrbtnika na Tomotu. Tisti, ki je prvi rešil največ
 
 ## Vaje 4
 
-**Datum:** 1.03.2023
+**Datum:** 8.03.2023
 
-Reševali smo dinamični problem matrik. Glej ```Vaje4\Vaje4.pdf```.
+Reševali smo dinamični problem matrik. Glej ```Zapiski_vaj```.
 
 ## Komentarji in opombe
 
