@@ -81,12 +81,12 @@ def primerjava_algoritmov(fun, gen_primerov, sez_n, k = 10):
 
 def test_gen_sez(n):
     "Generira testni seznam dolžine n."
-    return [random.randint(1, n) for _ in range(n)]
+    return [random.randint(1, 4) for _ in range(n)]
 # -----------------------------------------------------------------------------
 
 if __name__ == '__main__':
     print("Starting")
     #primerjava iterativne zabice in zabice z rekurzijo
-    #primerjava_algoritmov([Zabica.zabica, Zabica.zabica_iter], test_gen_sez, [i for i in range(70)])
-    narisi_in_pokazi_graf(Zabica.zabica_iter, test_gen_sez, [i for i in range(200)])
+    primerjava_algoritmov([Zabica.zabica, Zabica.zabica_iter], test_gen_sez, [i for i in range(100)])
+    #narisi_in_pokazi_graf(Zabica.zabica_iter, test_gen_sez, [i for i in range(200)])
     print("Done")
