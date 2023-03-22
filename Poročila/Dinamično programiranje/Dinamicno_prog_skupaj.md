@@ -212,7 +212,7 @@ $
 Uporabimo podobno idejo kot pri 0/1 nahrbtniku. Imamo nek nabor, kjer so shranjene do sedaj vse možne vsote in nek drug nabor, kjer hranimo nove kandidate. Naredimo unijo naborov in tako dodamo nove kadidate. Postopek ponovimo za vsak element osnovnega seznama, z izjemo prvega.
 
 Koda:
-```
+``` python
 tab2 = [2,3,4,5,12,34]
 rez = {tab2[0]}
 for el in tab2[1:]:
@@ -237,7 +237,7 @@ ___
 ## Naloga 1
 *Implementiraj funkcijo `optimalni_tovor(predmeti, W)`, ki vrne največjo skupno ceno predmetov, ki jih lahko trgovec natovori na letalo z maksimalno nosilnostjo `W`.*
 
-```
+``` python
 def optimalni_tovor(predmeti, W):
     @lru_cache(maxsize=None)
     def najboljsi(i, W):
@@ -255,7 +255,7 @@ def optimalni_tovor(predmeti, W):
 *Implementiraj funkcijo `optimalni_predmeti(predmeti, W)`, ki vrne seznam predmetov ki dosežejo največjo vrednost, če lahko na letalo natovorimo skupno težo največ `W`. Če je možnosti več, vrni katerokoli.*
 
 
-```
+``` python
 def optimalni_predmeti(predmeti, W):
     predmeti = [(el[1],el[0]) for el in predmeti]
     n = len(predmeti)
@@ -294,7 +294,7 @@ $(c_i, v_i, z_i)$, kjer je:*
 
 
 
-```
+``` python
 def optimalni_tovor_zaloga(predmeti, W):
     nova = [(el[0],el[1]) for el in predmeti for _ in range(el[2])]
     return optimalni_tovor(nova,W)
@@ -305,7 +305,7 @@ ___
 
 Predpostavi, da ima sedaj trgovec na voljo neomejeno zalogo posameznih predmetov. implementiraj funkcijo `neomejena_zaloga(predmeti, W)`, ki vrne najvišjo skupno ceno tovora na letalu z maksimalno nosilnostjo `W`
 
-```
+``` python
 def neomejena_zaloga(p,W):
     @lru_cache(maxsize=None)
     def pom(w):
@@ -452,7 +452,7 @@ ___
 <h1 align="center"> Časovna zahtevnost </h1>
 
 ## Koda
-```
+``` python
 def optimalni_tovor(predmeti, W):
     @lru_cache(maxsize=None)
     def najboljsi(i, W):
@@ -486,7 +486,7 @@ Potreben čas[s] v odvisnoti od števila predmetov
 ___
 Za risanje smo uporabili naslednjo kodo:
 
-```
+``` python
 from functools import lru_cache
 import matplotlib.pyplot as plt
 import time
