@@ -1,4 +1,4 @@
-# POROČILO 1
+# POROČILO 2
 **ime:** Filip Bojko
 
 ## Vsebina 
@@ -14,13 +14,13 @@ Vse vaje se nahajajo v folderju <i> Vaje4-8 </i>
 
 **Datum:** 15.03.2023
 
-Spoznali smo nove grafe (DAG). Glej ```Zapiski_vaj```
+Spoznali smo nove grafe (DAG) in rešili 3 naloge pred tablo. na koncu smo reševali naloge iz Scapegoat dreves. Glej [Vaje5](Vaje5-8/Vaje5/Vaje5.md).
 
 ## Vaje 2
 
 **Datum:** 22.03.2023
 
-Ogledali smo si problem 0/1 nahrbtnika. Glej ```Zapiski_vaj```.
+Ogledali smo si BFS in njegovo delovanje. Rešili smo tudi nalogo iz Floyd-Warshallow algoritma. Glej [Vaje6](Vaje5-8/Vaje6/Vaje6.md).
 
 ## Vaje 3
 
