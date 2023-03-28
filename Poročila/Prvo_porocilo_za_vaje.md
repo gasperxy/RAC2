@@ -200,11 +200,28 @@ def test_gen_sez(max_cena, max_volumen, n):
 # -----------------------------------------------------------------------------
 
 if __name__ == '__main__':
-#    print(oceni_potreben_cas(optimalni_tovor, test_gen_sez, 50, 30, 50, 30, 12))
-    print(oceni_potreben_cas(optimalni_tovor, test_gen_sez, 50, 30, 100, 30, 12))
-    print(oceni_potreben_cas(optimalni_tovor, test_gen_sez, 50, 30, 150, 30, 12))
+    #print(oceni_potreben_cas(optimalni_tovor, test_gen_sez, 50, 30, 50, 30, 12))
+    #print(oceni_potreben_cas(optimalni_tovor, test_gen_sez, 50, 30, 30, 30, 12))
+    #print(oceni_potreben_cas(optimalni_tovor, test_gen_sez, 50, 30, 100, 30, 12))
+    #print(oceni_potreben_cas(optimalni_tovor, test_gen_sez, 50, 30, 150, 30, 12))
+    velikosti = []
+    tab_casi = []
+    for i in range(1,15):
+        velikosti.append(i*20)
+        tab_casi.append(oceni_potreben_cas(optimalni_tovor, test_gen_sez, 50, 30, i*20, 30, 3))
+    from matplotlib import pyplot as plt
+    plt.plot(velikosti, tab_casi)
+    plt.xlabel('stevilo predmetov')
+    plt.ylabel('cas izvajanja')
+    plt.show()
 ```
 Analiza časovne zahtevnosti:
+
+Zgornja koda izriše graf kako raste čas izvajanja v odvisnosti od velikosti problema:
+
+<figure>
+<img src="graf_cas_zaht.jpg" height="400" width="500" >
+</figure>
 
 Teoretično je časovna zahtevnost O(n*W), pri čemer je n število predmetov in W velikost nahrbtnika.
 Pri merjenju časa pri različno velikih testnih primerih, pa je bilo videti, da če število predmetov nahrbtnika povečamo za dvakratnik se nam s tem čas poveča nekoliko več kot za enak faktor.
