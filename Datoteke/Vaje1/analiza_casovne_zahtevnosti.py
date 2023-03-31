@@ -23,7 +23,7 @@ def oceni_potreben_cas(fun, gen_primerov, n, k):
 
 def test_gen_sez(n):
     "Generira testni seznam dolžine n."
-    return [random.randint(1, n) for _ in range(n)]
+    return [random.randint(1, 5) for _ in range(n)]
 
 def primerjaj_case_dveh(fun1, fun2, gen_primerov, sez_n, ime , k=10):
     """ Funkcija izpiše tabeli časa za izračun 'fun1' in 'fun2' na primerih generiranih z
@@ -67,5 +67,5 @@ def primerjaj_case_dveh(fun1, fun2, gen_primerov, sez_n, ime , k=10):
 
 if __name__ == '__main__':
     print("ZAČENJAM")
-    primerjaj_case_dveh(zabica.zabica, zabica.zabica_iterativno, test_gen_sez, [i for i in range(20)], "primerjava")
+    primerjaj_case_dveh(zabica.zabica, zabica.zabica_iterativno, test_gen_sez, [i for i in range(50)], "primerjava")
     print("KONEC")

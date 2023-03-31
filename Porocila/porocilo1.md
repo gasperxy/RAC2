@@ -33,12 +33,12 @@ Ponovitev časovne zahtevnosti in O notacije. Za podatkovne strukture v pythonu 
 * brisanje začetku/sredini/koncu
 
 REŠITEV:\
-Kaj pomeni $f \isin O(g)$ za neki funkciji $f,g: \mathbb{N}\ \rightarrow \mathbb{R^+}\ ?$  
-$f \isin O(g) \iff \exist\ c\ \exists\ n_0 : f(n) \leq c \cdot g(n)$  
+Kaj pomeni $f \in O(g)$ za neki funkciji $f,g: \mathbb{N}\ \rightarrow \mathbb{R^+}\ ?$  
+$f \in O(g) \iff \exists\ c\ \exists\ n_0 : f(n) \leq c \cdot g(n)$  
 
 ![Alt text](../Datoteke/Vaje1/graf_casovna_zahtevnost.png)
 
-primer: $n \isin O(n)$, kjer je $O(n)$  velikost vhodnih podatkov.
+primer: $n \in O(n)$, kjer je $O(n)$  velikost vhodnih podatkov.
 
 
 | operacija  | seznam          | množica/slovar | verižni seznam |
@@ -130,6 +130,12 @@ Spodnji graf nam prikazuje časovne zahtevnosti obeh pristopov in potrjuje opisa
 ![Alt text](../Datoteke/Vaje1/primerjava_casovne_zahtevnosti.png)
 
 ---
+## **POPRAVEK ANALIZE ČASOVNE ZAHTEVNOSTI**
+Po ponovnem razmisleku in poigravanju s funkcijo `analiza_casovna_zahtevnosti` sem prišel do drugačnega zaključka, glede primerjave obeh metod, na primeru naloge `zabica`. Tokrat sem generiral za tabelo energij generiral sezname naključnih števil, ki so bile omejene z energijo 5. Na ta način nam graf interpretira primerjavo obeh metod na drugačen način. V tem primeru sta obe metodi približno enake časovne zahtevnosti, oziroma je metoda z oporabo Bellmanove enačbe kanček počasnejša. Razlog, da je v prvi primerjavi prišlo do napačne interpretacije podatkov je v tem, da v primeru generiranja prevelikih naključnih energij, naša žabica lahko odskaklja iz močvare v morda dveh ali treh skokih, saj si z nekim potencialnim skokom lahko pridobi dovolj energije, da takoj odskaklja ven iz močvare. Spodnji graf nam torej pove, da sta časovni zahtevnosti obeh metod približno enakega reda. Pri podobnih časovnih analizah je potrebno biti pazljiv, saj nam generiranje napačnih začetnih podatkov lahko poda napačno interpretacijo analize časovne zahtevnosti. 
+
+![Alt text](../Datoteke/Vaje1/primerjava_casovne_zahtevnosti_popravek.png)
+
+---
 
 ## **Vaje 2**
 
@@ -174,14 +180,16 @@ Vhodni podatki:
 * predmeti $(v_i, c_i)$ za $i = 1 \dots n$ 
 * velikost nahrbtnika $W$
 
+
 Izhdoni podatki:
 * $X = (x_1, \dots ,x_n)$, kjer je 
 $x_i = \begin{cases}
-1; vzamemo\ i-ti\ predmet\\
-0; sicer\\
-\end{cases}$ (vzamemo i-ti predmet ali pa ga ne vzamemo)
-* $\sum_{i=1}^{n}v_i \cdot x_i \leq W$ (v nahrbtnik ne moremo dati več, kot je volumen nahrbtnika)
-* $max\{\sum_{i=1}^{n}c_i \cdot x_i\}$ (iščemo predmete, ki nam prinesejo največjo ceno)
+1; \text{vzamemo i-ti predmet}\\
+0; \text{sicer}
+\end{cases}$ 
+(vzamemo i-ti predmet ali pa ga ne vzamemo)
+* $\sum\limits_{i=1}^{n}v_i \cdot x_i \leq W$ (v nahrbtnik ne moremo dati več, kot je volumen nahrbtnika)
+* $max\{\sum\limits_{i=1}^{n}c_i \cdot x_i\}$ (iščemo predmete, ki nam prinesejo največjo ceno)
 
 Z $G(i,W)$ označimo maksimalno vrednost nahrbtnika s predmeti $1, \dots ,i$ in velikostjo $W$. Bellmanova enačba za problem 0/1 nahrbtnika je sledeča: $G(i,W) = max\{G(i-1,W), G(i-1, W-v_i) + c_i\}$. Robni pogoj pa je: 
 $G(0,W) = \begin{cases}
@@ -231,13 +239,11 @@ Kako bi še lahko rešil ta problem (z uporabo 0/1 nahrbtnika)?
 
 REŠITEV:\
 Dinamično:\
-$vsota(i,S) = \left\{
-\begin{array}{ll}
-true &\text{, če S lahko zapišemo kot vsoto z [s\_1,\dots,s\_n]} \\ 
-false &\text{, sicer}
-\end{array} 
-\right.
-$
+$vsota(i,S) = 
+\begin{cases}
+true; &\text{če S lahko zapišemo kot vsoto } [s\_1,\dots,s\_n] \\ 
+false; &\text{sicer}
+\end{cases}$
 
 Bellmanova enačba: $vsota(i,S)= vsota(i-1,S-s_i) \lor  vsota(i-1,S)$
 
@@ -406,17 +412,18 @@ Izhodni podatki:
 
 OPOMBA: $N(i,j)$ predstavlja minimalno število množenj realnih števil za izračun produkta danih matrik $A_i \cdots A_j$.
 
-**Bellmanova enačba:** $min_{i \leq k<j} \{N(i,k) + N(k+1,j) + d_i \times d_{k+1} \times d_j\}$, kjer je $N(i,i)=0$  robni pogoj.
+**Bellmanova enačba:** 
+$\min\limits_{i \leq k<j} \{N(i,k) + N(k+1,j) + d_i \times d_{k+1} \times d_j\}$, kjer je $N(i,i)=0$ robni pogoj.
 
-i\j | 1$_{(3\times 5)}$ | 2$_{(5\times 4)}$  | 3$_{(4\times 2)}$ | 4$_{(2\times 3)}$ | 5$_{(3\times 5)}$ | 6$_{(5\times 4)}$ | 7$_{(4\times 6)}$ | 8$_{(6\times 3)}$ |
+i\j | $1_{(3\times 5)}$ | $2_{(5\times 4)}$  | $3_{(4\times 2)}$ | $4_{(2\times 3)}$ | $5_{(3\times 5)}$ | $6_{(5\times 4)}$ | $7_{(4\times 6)}$ | $8_{(6\times 3)}$ |
 :-----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-1|0|60$_{(1)}$|70$_{(1)}$|88$_{(3)}$|130$_{(3)}$|164$_{(3)}$|224$_{(3)}$|242$_{(3)}$|
-2| |0|40$_{(2)}$|70$_{(3)}$|120$_{(3)}$|150$_{(3)}$|218$_{(3)}$|224$_{(3)}$|
-3| | |0|24$_{(3)}$|70$_{(3)}$|102$_{(3)}$|166$_{(3)}$|178$_{(3)}$|
-4| | | |0|30$_{(4)}$|70$_{(5)}$|118$_{(6)}$|154$_{(7)}$|
-5| | | | |0|60$_{(5)}$|132$_{(6)}$|168$_{(6)}$|
-6| | | | | |0|120$_{(6)}$|132$_{(6)}$|
-7| | | | | | |0|72$_{(7)}$|
+1|0|$60_{(1)}$|$70_{(1)}$|$88_{(3)}$|$130_{(3)}$|$164_{(3)}$|$224_{(3)}$|$242_{(3)}$|
+2| |0|$40_{(2)}$|$70_{(3)}$|$120_{(3)}$|$150_{(3)}$|$218_{(3)}$|$224_{(3)}$|
+3| | |0|$24_{(3)}$|$70_{(3)}$|$102_{(3)}$|$166_{(3)}$|$178_{(3)}$|
+4| | | |0|$30_{(4)}$|$70_{(5)}$|$118_{(6)}$|$154_{(7)}$|
+5| | | | |0|$60_{(5)}$|$132_{(6)}$|$168_{(6)}$|
+6| | | | | |0|$120_{(6)}$|$132_{(6)}$|
+7| | | | | | |0|$72_{(7)}$|
 8| | | | | | | |0|
 
 Vrednosti $(i,j)$ v zgornji tabeli dobimo z upoštevanjem Bellmanove enačbe.
@@ -427,7 +434,7 @@ OPIS:\
 Recimo, da imamo izračunano tabelo $N(i,j) = (v, idx)$ iz Bellmanove enačbe, kjer je $v$ optimalno število operacij, $idx$ pa je seznam indeksov $k$, kjer je bil dosežen minimum pri združevanju podproblemov. Kako bi izračunali število vseh optimalnih produktov? Kakšna je časovna zahtevnost? Kaj pa če bi želel izpisati vse optimalne produkte?
 
 REŠITEV:\
-Z $S(i,j)$ označimo število načinov, na katere dobimo najmanjše število množenj matrik $A_i \cdots A_j$. Recimo, da je $k=l$. To pomeni, da je bil minimum dosežen pri sledečem množenju: $(A_1 \cdots A_l)\cdot (A_{l+1} \cdots{} A_n)$. Število optimalnih produktov za to množenje je $S(1,l) \cdot S(l+1,n)$. V splošnem pa $k \in \mathbb{N}$ lahko zavzame več vrednosti. Iz prejšnjega primera sledi, da je v splošnem $S(i,j)=\sum_{k \in idx} S(i,k) \cdot S(k+1,j)$.
+Z $S(i,j)$ označimo število načinov, na katere dobimo najmanjše število množenj matrik $A_i \cdots A_j$. Recimo, da je $k=l$. To pomeni, da je bil minimum dosežen pri sledečem množenju: $(A_1 \cdots A_l)\cdot (A_{l+1} \cdots{} A_n)$. Število optimalnih produktov za to množenje je $S(1,l) \cdot S(l+1,n)$. V splošnem pa $k \in \mathbb{N}$ lahko zavzame več vrednosti. Iz prejšnjega primera sledi, da je v splošnem $S(i,j)=\sum\limits_{k \in idx} S(i,k) \cdot S(k+1,j)$.
 
 Iz uvodnih vaj vemo, da časovno zahtevnost izračunamo kot $število\ stanj \cdot število\ operacij$. Časovna zahtevnost našega problema je $O(n^2 \cdot n)$, kjer je $n^2$ število stanj (saj gresta $i$ in $j$ od 1 do $n$) in $n$ število operacij posameznega stanja.
 
