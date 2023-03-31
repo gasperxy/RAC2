@@ -322,6 +322,7 @@ def tovor_rezanje(predmeti, W):
 # **Vaje 4**
 ## Matrično množenje
 Na vajah se ukvarjali s problemom množenja matrik. Želimo zmnožiti $n$ matrik in pri tem opraviti čim manj operacij. Na vajah smo rešili dve nalogi.
+
 **VHOD:** 
 * matrike $A_1,\ldots, A_n$ 
 * dimenzije matrik $d_1, \ldots, d_{n+1}$ \
@@ -355,15 +356,6 @@ $N(i, j) = min \{N(i, k) + N(k+1,j) + d_{i}\cdot d_{k+1} \cdot d{j}\}$
 |**7**|||||||$0$|$72$|
 |**8**||||||||$0$|
 
-
-$$
-vsota(i,S) = \left \{ 
-    \begin{array}{ll}
-        True; & S\text{ lahko zapišemo kot vsoto  } s_i \in S \\ 
-        False; & \text{ sicer}
-    \end{array} 
-\right .
-$$
 
 $
 N(2,4) = \left 
