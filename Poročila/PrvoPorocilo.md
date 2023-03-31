@@ -357,8 +357,7 @@ $N(i, j) = min \{N(i, k) + N(k+1,j) + d_{i}\cdot d_{k+1} \cdot d{j}\}$
 
 
 $$
-vsota(i,S) = \left 
-\{ 
+vsota(i,S) = \left \{ 
     \begin{array}{ll}
         True; & S\text{ lahko zapišemo kot vsoto  } s_i \in S \\ 
         False; & \text{ sicer}
