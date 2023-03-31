@@ -126,9 +126,13 @@ def zabica_iterativno(mocvara):
             dp[i][j] = 1 + m
     return dp[0][0]
 ```
+Tu je časovna zahtevnost $O(2^n)$ saj opravimo rekurzivni klic.
 
+Primerjava časovne zahtevnosti:
 
+![graf](graf.jpeg)
 
+Z rdečo barvo je označena rešitev z memoizacija z modro pa rešitev s pomočjo rekurzije.
 # **VAJE 2 - 22.2.2023**
 
 ## NALOGA 1: Odgovori na vprašanja.
