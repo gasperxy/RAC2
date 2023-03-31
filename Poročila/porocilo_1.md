@@ -303,8 +303,7 @@ Opišimo Bellmanovo enačbo oz. rekurzivno zvezo.
 
 Potrebno je izračunati problem za produkt matrik velikosti: 3x5, 5x4, 4x2, 2x3, 3x5, 5x4, 4x6, 6x3 v tem vrstnem redu.
 
-![ResitveNaloge0](../Datoteke/vaje4/vaje_4_nal0.png)
-![Navodilo](../Datoteke/Vaje2/predmeti_01_nahrbtnik.png)
+![ResitveNaloge0](../Datoteke/Vaje4/vaje_4_nal0.png)
 
 ### Naloga 1
 Recimo, da imamo izračunano tabelo $N(i,j)=(v,idx)$ iz Bellmanove enačbe, kjer je $v$ optimalno število operacij, $idx$ pa je seznam
@@ -331,14 +330,14 @@ V tabeli je v (i,j)-ti celici prikazano min_operacij(index, kjer je bil dosežen
 
 Naša naloga je bila, da poiščemo optimalno število operacij in način kako lahko zmnožimo te matrike, da imamo toliko operacij.
 
-![Tabela1](../Datoteke/vaje4/tabela1.png)
+![Tabela1](../Datoteke/Vaje4/tabela1.png)
 
 ### Naloga 3
 Podobno kot pri prejšni nalogi imamo izračunano spodnjo tabelo.
 
-![Tabela2](../Datoteke/vaje4/tabela2.png)
+![Tabela2](../Datoteke/Vaje4/tabela2.png)
 
-![ResitveNaloge3](../Datoteke/vaje4/vaje_4_nal2.png)
+![ResitveNaloge3](../Datoteke/Vaje4/vaje_4_nal2.png)
 
 Odgovorili smo na naslednja vprašanja:
 * Koliko operacij potrebujemo, da jih optimalno zmnožimo?
