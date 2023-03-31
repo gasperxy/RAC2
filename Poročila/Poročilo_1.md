@@ -75,7 +75,7 @@ Vhodni podatki so pari $(v_i, c_i)$ za $i = 1, 2, \dots, n$, ki nam povedo velik
 Izhodni podatek je $X = (x_1, x_2, \dots, x_n)$, kjer $x_i = \begin{cases}
 1;\ vzamemo\ i-ti\ predmet\\ 0;\ ne\ vzamemo\ i-ti\ predemet
 \end{cases}$. 
-Veljati mora da je $\sum_{i=1}^{n}v_i \cdot x_i \leq W$, kar nam pove velikost vseh vzetih predmetov, kar pa ne sme presegati. Takrat lahko izračunamo vrednost nahrbtnika $\sum_{i=1}^{n}c_i \cdot x_i$
+Veljati mora da je $\sum\limits_{i=1}^{n}v_i \cdot x_i \leq W$, kar nam pove velikost vseh vzetih predmetov, kar pa ne sme presegati. Takrat lahko izračunamo vrednost nahrbtnika $\sum\limits_{i=1}^{n}c_i \cdot x_i$
 
 Bellmanova enačba:
 
