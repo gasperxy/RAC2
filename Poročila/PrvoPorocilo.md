@@ -63,13 +63,19 @@ def zabica(mocvara):
 ## **Primerjava časovne zahtevnosti**
 ### **Dinamično**
 Spodnji graf nam prikazuje časovno zahtevnost dinamičnega pristopa k reševanju problema žabice. Čaosvna zahtevnost tega pristopa je $O(2^n)$.
+
 ![Žabica ČŽ dinamično.](../Datoteke/Vaje1/zabica_dinamicno_cz.png)
+
 ### **Iterativno**
 Spodnji graf nam prikazuje časovno zahtevnost iterativnega pristopa k reševanju problema žabice. Časovna zahtevnost tega pristopa je $O(n^3)$. Rešitev tega problema uporablja "bottoms-up" pristop.
+
 ![Žabica ČŽ iterativno.](../Datoteke/Vaje1/zabica_iterativno_cz.png)
+
 ### **Dinamično in iterativno**
 Spodnji graf prikazuje časovno zahtevnost obeh pristopov hkrati.
+
 ![Žabica ČŽ dinamično in iterativno.](../Datoteke/Vaje1/primerjava_dinamicno_iterativno.png)
+
 **KODA:**
 ```python
 def izmeri_cas(fun, primer):
@@ -221,6 +227,17 @@ Zapiši dinamični problem (Bellmanovo enačbo) ter oceni časovno zahtevnost.
 
 Kako bi še lahko rešil ta problem (z uporabo 0/1 nahrbtnika)?
 
+
+$
+vsota(i,S) = \left 
+\{ 
+    \begin{array}{ll}
+        True; & S\text{ lahko zapišemo kot vsoto  } s_i \in S \\ 
+        False; & \text{ sicer}
+    \end{array} 
+\right .
+$
+
 $vsota(i,S)=\begin{cases}True; \ S\;lahko\;zapišemo\;kot\;vsoto\;z\;s_i\in S\\False; \;sicer\end{cases}$
 
 $vsota(i, S) = vsota(i-1,S-s_i) \lor vsota(i-1,S)$
@@ -338,15 +355,66 @@ $N(i, j) = min \{N(i, k) + N(k+1,j) + d_{i}\cdot d_{k+1} \cdot d{j}\}$
 |**7**|||||||$0$|$72$|
 |**8**||||||||$0$|
 
-$N(2,4) = \begin{cases}k=2:0+24+5\cdot4\cdot3=84\\k=3:40+0+5\cdot2\cdot3=70\end{cases}$
 
-$N(3,5) = \begin{cases}k=4:24+0+4\cdot3\cdot5=84\\k=3:30+0+4\cdot2\cdot5=70\end{cases}$
+$
+vsota(i,S) = \left 
+\{ 
+    \begin{array}{ll}
+        True; & S\text{ lahko zapišemo kot vsoto  } s_i \in S \\ 
+        False; & \text{ sicer}
+    \end{array} 
+\right .
+$
 
-$N(4,6) = \begin{cases}k=4:0+60+2\cdot3\cdot4=84\\k=5:30+0+2\cdot5\cdot4=70\end{cases}$
+$
+N(2,4) = \left 
+\{ 
+    \begin{array}{ll}
+        k=2:0+24+5\cdot4\cdot3=84 \\ 
+        k=3:40+0+5\cdot2\cdot3=70
+    \end{array} 
+\right .
+$
 
-$N(5,7) = \begin{cases}k=5:0+120+3\cdot5\cdot6=210\\k=6:60+0+3\cdot4\cdot6=132\end{cases}$
+$
+N(3,5) = \left 
+\{ 
+    \begin{array}{ll}
+        k=4:24+0+4\cdot3\cdot5=84 \\ 
+        k=3:30+0+4\cdot2\cdot5=70
+    \end{array} 
+\right .
+$
 
-$N(6,8) = \begin{cases}k=6:0+72+60=132\\k=7:120+0+5\cdot6\cdot3=132\end{cases}$
+$
+N(4,6) = \left 
+\{ 
+    \begin{array}{ll}
+        k=4:0+60+2\cdot3\cdot4=84 \\ 
+        k=5:30+0+2\cdot5\cdot4=70
+    \end{array} 
+\right .
+$
+
+$
+N(5,7) = \left 
+\{ 
+    \begin{array}{ll}
+        k=5:0+120+3\cdot5\cdot6=210 \\ 
+        k=6:60+0+3\cdot4\cdot6=132
+    \end{array} 
+\right .
+$
+
+$
+N(6,8) = \left 
+\{ 
+    \begin{array}{ll}
+        k=6:0+72+60=132 \\ 
+       k=7:120+0+5\cdot6\cdot3=132
+    \end{array} 
+\right .
+$
 
 ## 1. Naloga
 
