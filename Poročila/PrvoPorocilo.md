@@ -227,17 +227,6 @@ Zapiši dinamični problem (Bellmanovo enačbo) ter oceni časovno zahtevnost.
 
 Kako bi še lahko rešil ta problem (z uporabo 0/1 nahrbtnika)?
 
-
-$
-vsota(i,S) = \left 
-\{ 
-    \begin{array}{ll}
-        True; & S\text{ lahko zapišemo kot vsoto  } s_i \in S \\ 
-        False; & \text{ sicer}
-    \end{array} 
-\right .
-$
-
 $vsota(i,S)=\begin{cases}True; \ S\;lahko\;zapišemo\;kot\;vsoto\;z\;s_i\in S\\False; \;sicer\end{cases}$
 
 $vsota(i, S) = vsota(i-1,S-s_i) \lor vsota(i-1,S)$
