@@ -356,7 +356,7 @@ $N(i, j) = min \{N(i, k) + N(k+1,j) + d_{i}\cdot d_{k+1} \cdot d{j}\}$
 |**8**||||||||$0$|
 
 
-$
+$$
 vsota(i,S) = \left 
 \{ 
     \begin{array}{ll}
@@ -364,7 +364,7 @@ vsota(i,S) = \left
         False; & \text{ sicer}
     \end{array} 
 \right .
-$
+$$
 
 $
 N(2,4) = \left 
