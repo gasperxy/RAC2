@@ -46,7 +46,7 @@ V primeru [2, 4, 1, 2, 1, 3, 1, 1, 5] lahko žabica odskaklja iz močvare v treh
 
 Bellamova enačba za naš problem:
 
-$$žabica(i,e) = 1 + \begin{cases} 0; i + e > n \\žabica(i+j, e-j+muhe[i])\end{cases}$$
+![Alt text](/Datoteke/bellmanova_enacba_zabica.png)
 
 Koda z memoizacijo:
 
@@ -98,15 +98,18 @@ def zabica_iterativno(mocvara):
     return dp[0][0]
 ```
 **Ocenili smo tudi časovno zahtevnost:**
-- *memoizacija:* 
 
-  Časovna zahtevnost je $O(2^n)$, saj opravljamo rekurzivni klic in tako preverimo vse možne kombiniacije skokov. 
 
 - *iterativna metoda:*  
   Izračunati moramo vsa stanja: $$ O(n^2) \times O(n) = O(n^3)$$
-$O(n^2)$ -> število stanj
+    $O(n^2)$ -> število stanj
 
     $O(n)$ -> čas za izračun enega stanja
+
+
+**Primerjava časovne zahtevnosti:**
+Z roza barvo je žabica iterativno, z vijolično pa žabica z memoizacijo.
+![Alt text](/Datoteke/Figure_1.png)
 
 # Vaje 2
 **Datum**: 22.2.2023
@@ -200,8 +203,8 @@ Zapiši dinamični problem (Bellmanovo enačbo) ter oceni časovno zahtevnost.
 
 
 Zapis Bellmanove enačbe:
-$$vsota(i,s) = \begin{cases} True; \: če \: s \: lahko \: zapišemo \: kot \: vsoto \: iz \: seznama \: [s_1,...,s_i] \\ False; \: sicer\end{cases}$$
-$$vsota(i,s) = vsota(i - 1, s-s_i) \: \: or \: \:vsota(i -1, s) $$
+
+![Alt text](/Datoteke/bellmanova_enacba2.png)
 Prva možnost je da vzamemo i-ti element, druga pa da ga ne vzamemo. Vmes je *or* ker nam je vseeno kdaj dosežemo vsoto.
 
 Robni primeri, ki nastopijo:
