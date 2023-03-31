@@ -184,20 +184,26 @@ Vhodni podatki:
 Izhdoni podatki:
 * $X = (x_1, \dots ,x_n)$, kjer je 
 $$
-x_i = \begin{cases}
+x_i = 
+\left \{ \begin{array}{ll}
 1; \text{vzamemo i-ti predmet}\\
 0; \text{sicer}
-\end{cases}
+\end{array}
+\right. 
 $$ 
 (vzamemo i-ti predmet ali pa ga ne vzamemo)
 * $\sum\limits_{i=1}^{n}v_i \cdot x_i \leq W$ (v nahrbtnik ne moremo dati več, kot je volumen nahrbtnika)
 * $max\{\sum\limits_{i=1}^{n}c_i \cdot x_i\}$ (iščemo predmete, ki nam prinesejo največjo ceno)
 
 Z $G(i,W)$ označimo maksimalno vrednost nahrbtnika s predmeti $1, \dots ,i$ in velikostjo $W$. Bellmanova enačba za problem 0/1 nahrbtnika je sledeča: $G(i,W) = max\{G(i-1,W), G(i-1, W-v_i) + c_i\}$. Robni pogoj pa je: 
-$$G(0,W) = \begin{cases}
+$$
+G(0,W) = 
+\left \{ \begin{array}{ll}
 -\infty; w < 0 \\
 0; w \ge 0 
-\end{cases}$$
+\end{array}
+\right. 
+$$ 
 
 Toda reševanje na način od zgoraj navzdol (top-down) je v tem primeru zelo počasen, saj dejansko pregledamo vse možne kombinacije predmetov v nahrbtniku. Ker je premetov $n$ in imamo za vsak predmet dve možnosti, torej ali ga damo v nahrbtnik ali ne, je časovna zahtevnost reda $O(2^n)$. Zato se problema lotimo na drugačen način, kot z tako imenovano silo (brut force).
 
@@ -240,16 +246,17 @@ Zapiši dinamični problem (Bellmanovo enačbo) ter oceni časovno zahtevnost.
 Kako bi še lahko rešil ta problem (z uporabo 0/1 nahrbtnika)?
 
 REŠITEV:\
-Dinamično:\
+Dinamično:
 $$ 
 vsota(i,S) =
-\begin{cases} 
-true; &\text{če S lahko zapišemo kot vsoto } [s\_1,\dots,s\_n] \\ 
-false; &\text{sicer}
-\end{cases}
+\left \{ \begin{array}{ll}
+true; &\text{če S lahko zapišemo kot vsoto } [s\_1,\dots,s\_n] \\
+false; &\text{sicer} 
+\end{array}
+\right. 
 $$
 
-Bellmanova enačba: $vsota(i,S)= vsota(i-1,S-s_i) \lor  vsota(i-1,S)$
+Bellmanova enačba: $vsota(i,S)= vsota(i-1,S-s_i) \lor vsota(i-1,S)$
 
 Robni pogoji:
 * $vsota(i,S)=true \dots S_i = S$ 
@@ -417,10 +424,10 @@ Izhodni podatki:
 OPOMBA: $N(i,j)$ predstavlja minimalno število množenj realnih števil za izračun produkta danih matrik $A_i \cdots A_j$.
 
 **Bellmanova enačba:** 
-$
-\min\limits_{i \leq k<j} N(i,k) + N(k+1,j) + d_i \times d_{k+1} \times d_j 
-$, 
-kjer je $N(i,i)=0$ robni pogoj.
+$$
+\min\limits_{i \leq k<j} N(i,k) + N(k+1,j) + d_i \times d_{k+1} \times d_j
+$$
+,kjer je $N(i,i)=0$ robni pogoj.
 
 i\j | $1_{(3\times 5)}$ | $2_{(5\times 4)}$  | $3_{(4\times 2)}$ | $4_{(2\times 3)}$ | $5_{(3\times 5)}$ | $6_{(5\times 4)}$ | $7_{(4\times 6)}$ | $8_{(6\times 3)}$ |
 :-----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
