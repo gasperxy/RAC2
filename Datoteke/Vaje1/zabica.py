@@ -94,62 +94,62 @@ print(zabica(mocvara))
 
 
 
-### generator testnih primerov za bottom up pristop
-import random
-import matplotlib.pyplot as plt
-import timeit
-
-
-# vre seznam dolzine n, z naključnimi vrednostmi od 1 do max vrednosti.
-def generator_testnih_primerov(n, max_vr):
-    return [random.randint(1, max_vr) for _ in range(n)]
-
-
-def izmera_casa(testni_primer):
-    koda = 'from __main__ import zabica'
-    nas_primer = f'zabica({testni_primer})'
-    t = timeit.timeit(nas_primer, setup=koda, number=5)
-    return t / 5.0  # povprečen čas izvedbe funkcije, izmerjen v 5 ponovitvah
-
-
-
-izmeri_cas1 = True
-if izmeri_cas1 == True:
-    print()
-    print('Nas zacetni primer')
-    for n in range(100, 600, 100):
-        testni_primer = [2, 4, 1, 2, 1, 3, 1, 1, 5]
-        t = izmera_casa(testni_primer)
-        print(f'n = {n}, cas = {t:.6f}s')
-
-
-# pogledamo, koliko casa potrebuje funkcija v povprecju 5 ponovitev, ko je n = 100, 200, 300, 400 in 500
-izmeri_cas2 = True
-if izmeri_cas2 == True:
-    tabela_casov = []
-    print()
-    print('Nakljucni podatki')
-    for n in range(100, 501, 50):
-        testni_primer = generator_testnih_primerov(n, 10)
-        t = izmera_casa(testni_primer)
-        tabela_casov.append(t)
-        print(f'n = {n}, cas = {t:.6f}s')
-  
-
-    # izmerjeni časi
-    velikosti = [100, 150, 200, 250, 300, 350, 400, 450, 500]
-    casi = tabela_casov
-
-    # nariši graf
-    plt.plot(velikosti, casi, 'o')
-    plt.xlabel('Velikost testnega primera')
-    plt.ylabel('Čas (s)')
-    
-    # Shranimo sliko 
-    plt.savefig('casovna_zahtevnost.png')
-
-    plt.show()
-
+# ### generator testnih primerov za bottom up pristop
+# import random
+# import matplotlib.pyplot as plt
+# import timeit
+# 
+# 
+# # vre seznam dolzine n, z naključnimi vrednostmi od 1 do max vrednosti.
+# def generator_testnih_primerov(n, max_vr):
+#     return [random.randint(1, max_vr) for _ in range(n)]
+# 
+# 
+# def izmera_casa(testni_primer):
+#     koda = 'from __main__ import zabica'
+#     nas_primer = f'zabica({testni_primer})'
+#     t = timeit.timeit(nas_primer, setup=koda, number=5)
+#     return t / 5.0  # povprečen čas izvedbe funkcije, izmerjen v 5 ponovitvah
+# 
+# 
+# 
+# izmeri_cas1 = True
+# if izmeri_cas1 == True:
+#     print()
+#     print('Nas zacetni primer')
+#     for n in range(100, 600, 100):
+#         testni_primer = [2, 4, 1, 2, 1, 3, 1, 1, 5]
+#         t = izmera_casa(testni_primer)
+#         print(f'n = {n}, cas = {t:.6f}s')
+# 
+# 
+# # pogledamo, koliko casa potrebuje funkcija v povprecju 5 ponovitev, ko je n = 100, 200, 300, 400 in 500
+# izmeri_cas2 = True
+# if izmeri_cas2 == True:
+#     tabela_casov = []
+#     print()
+#     print('Nakljucni podatki')
+#     for n in range(100, 501, 50):
+#         testni_primer = generator_testnih_primerov(n, 10)
+#         t = izmera_casa(testni_primer)
+#         tabela_casov.append(t)
+#         print(f'n = {n}, cas = {t:.6f}s')
+#   
+# 
+#     # izmerjeni časi
+#     velikosti = [100, 150, 200, 250, 300, 350, 400, 450, 500]
+#     casi = tabela_casov
+# 
+#     # nariši graf
+#     plt.plot(velikosti, casi, 'o')
+#     plt.xlabel('Velikost testnega primera')
+#     plt.ylabel('Čas (s)')
+#     
+#     # Shranimo sliko 
+#     plt.savefig('casovna_zahtevnost.png')
+# 
+#     plt.show()
+# 
 
 
 
