@@ -304,6 +304,7 @@ Opišimo Bellmanovo enačbo oz. rekurzivno zvezo.
 Potrebno je izračunati problem za produkt matrik velikosti: 3x5, 5x4, 4x2, 2x3, 3x5, 5x4, 4x6, 6x3 v tem vrstnem redu.
 
 ![ResitveNaloge0](../Datoteke/vaje4/vaje_4_nal0.png)
+![Navodilo](../Datoteke/Vaje2/predmeti_01_nahrbtnik.png)
 
 ### Naloga 1
 Recimo, da imamo izračunano tabelo $N(i,j)=(v,idx)$ iz Bellmanove enačbe, kjer je $v$ optimalno število operacij, $idx$ pa je seznam
