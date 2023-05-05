@@ -47,7 +47,7 @@ $G[i]= \{j:\omega(i,j);\ \forall j, \ da \ (i,j) \in E \}$
 |:--:|:--:|:--:|:--:|
 matrika sosednosti|$O(n^2)$|$O(1)$|$O(n)$|
 seznam sosednosti|$O(m+n)$|$O(n)$|$O(1)$|
-slovar sosednosti|$O(m+n)$|$O(1)$|$O(n)$/$O(1)$
+slovar sosednosti|$O(m+n)$|$O(1)$|$O(n)$ / $O(1)$
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 ## Naloga 3
 
-### _Naj bo sedaj $G$ usmerjen utežen graf brez ciklov. Kako bi izračunal ceno najdaljše poti v tem grafu med vozliščema $s$ in $t$._
+### Naj bo sedaj $G$ usmerjen utežen graf brez ciklov. Kako bi izračunal ceno najdaljše poti v tem grafu med vozliščema $s$ in $t$.
 
 $D[i]$ = najdaljša pot od $i$ do $t$ \
 $D[t]=0$, $D[i] = - \infty$ \
@@ -93,7 +93,7 @@ ___
 ___
 
 ## Naloga 1
-### _Ponovi BFS algoritem. Modificiraj ga, tako da bo iskal najkrajše poti v neuteženem grafu._
+### Ponovi BFS algoritem. Modificiraj ga, tako da bo iskal najkrajše poti v neuteženem grafu.
 ### BFS - "Breadth-first search"
 
 <img src=bfs.png  width="60%" height="60%">
@@ -296,7 +296,7 @@ Da pretvorimo produkt v vsoto uporabimo logaritem oz. logaritemsko funkcijo. Na 
 Uporaba logaritemske funkcije:
 $\log(a \cdot b) = \log(a) \cdot \log(b)$
 \
-Utež na povezavi $i$-$j$ nastavimo na $-\log(R_{i,j})$
+Utež na povezavi $i$ - $j$ nastavimo na $-\log(R_{i,j})$
 \
 V ta namen želimo uporabiti F-W algoritem (to lahko naredimo če graf nima negativnih ciklov)
 
@@ -304,7 +304,7 @@ V ta namen želimo uporabiti F-W algoritem (to lahko naredimo če graf nima nega
 
 ### Pokažimo da jih naš graf res nima:
 Dokažemo s protislovjem: \
-Predpostavimo da imamo negativen cikel od $i$-$i$
+Predpostavimo da imamo negativen cikel od $i$ - $i$
 
 cena cikla: <br>
 $- \sum \limits_{j=1}^{k} \log(R(i_{j-1},i_{j})) < 0$ \
@@ -958,7 +958,8 @@ def push(T,x):
         oče = i//2
 ``` 
 
-Koda odstrani element (ČZ $log(n)$):
+Koda odstrani element:\
+ČZ $log(n)$
 ``` python
 def pop(T):
     '''odstrani prvi element iz kopice'''
