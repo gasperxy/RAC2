@@ -19,7 +19,13 @@ Predstavitev grafa:
 - slovar sosednosti $G$
 
 ### <ins>Matrika sosednosti</ins>
-$A[i][j]=\left\{\begin{array}{ll}\omega(i,j) & , (i,j) \in E \\ \text{None} &\text{, sicer}\end{array} \right.$
+$$
+A[i][j] = \left \\{ \begin{array}{ll}
+\omega(i,j) & , (i,j) \in E \\ 
+\text{None} &\text{, sicer}
+\end{array} 
+\right.
+$$
 
 <br>
 
@@ -47,7 +53,7 @@ ___
 
 ## Naloga 2
 
-### _Usmerjenemu grafu $G$ z $n$ vozlišči, ki nima ciklov rečemu tudi DAG (directed acyclic graph). Vozlišča takega grafa lahko topološko uredimo. To pomeni, da obstaja da zaporedje vozlišč $(v_1,v_2,\dots , v_n)$, tako da ne obstaja povezava od $v_i$ do $v_j$, če je $j<i$._
+### Usmerjenemu grafu $G$ z $n$ vozlišči, ki nima ciklov rečemu tudi DAG (directed acyclic graph). Vozlišča takega grafa lahko topološko uredimo. To pomeni, da obstaja da zaporedje vozlišč $(v_1,v_2,\dots , v_n)$, tako da ne obstaja povezava od $v_i$ do $v_j$, če je $j < i$.
 
 <br>
 
@@ -186,7 +192,7 @@ ___
 ___
 ## Naloga 1
 
-### _Iz prejšnjih vaj obravnavaj, kako razberemo najkrajše poti s pomočjo matrike $\Pi$, ki jo dobimo z FW algoritmom._
+### Iz prejšnjih vaj obravnavaj, kako razberemo najkrajše poti s pomočjo matrike $\Pi$, ki jo dobimo z FW algoritmom.
 
 <br>
 
@@ -222,7 +228,7 @@ ___
 
 ## Naloga 2
 
-### _Uteži sedaj dodamo še na vozlišča. Kako sedaj poiskati najcenejše poti?_
+### Uteži sedaj dodamo še na vozlišča. Kako sedaj poiskati najcenejše poti?
 
 <br>
 
@@ -236,7 +242,7 @@ ___
 
 ## Naloga 3
 
-### _Premisli, zakaj preprosta sprememba v FW algoritmu iz min na max ne najde nujno najdražje poti v grafu._
+### Premisli, zakaj preprosta sprememba v FW algoritmu iz min na max ne najde nujno najdražje poti v grafu.
 
 <br>
 
