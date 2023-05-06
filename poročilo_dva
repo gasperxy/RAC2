@@ -1,0 +1,124 @@
+# **2. POROČILO**
+**Ime:** Ela Kenda
+# Vsebina:
+* Vaje 5
+* Vaje 6
+* Vaje 7
+* Vaje 8
+* Vaje 9
+* Vaje 10
+
+# **VAJE 5 - 15.3.2023**
+## NALOGA 1: 
+**NAVODILO:** Imamo graf $G = (V,E)$ z utežmi $\omega : E \mapsto A$, ki vsaki povezavi dodeli utež iz množice A. $V = \{1,...,n\}, E \subset \binom{v}{2}$ Navedi nekaj prednosti oz. slabosti vsake izmed njih. Ponovi tudi, kaj je v grafu pot, sprehod in cikel.
+
+**REŠITEV:**
+
+Osnovni pojmi, ki jih uporabljamo pri  grafih:
+- $V = \{1,...,n\}$ množica vozlišč, ki sestavljajo graf,
+- $E \subset \binom{v}{2}$ množica povezav grafa $G$,
+- $n = |V|$ število vozlišč,
+- $m = |E|$ število povezav,
+
+Graf lahko predstavimo na več različnih načinov. Mi smo pogledali tri primere:
+1) Matrika sosednosti $A$:
+
+    $A$ je matrika dimenzij $n \times n$:
+        $$
+        A[i][j] =
+        \begin{cases}
+        \omega(i, j),\ (i, j) \in E\\
+        None;\ \text{sicer}
+        \end{cases}
+        $$
+2) Seznam sosednosti $G$:
+    $G$ je seznam seznamov dolžine $n$:
+
+    $G[i] = [(j, w(i,j)\ \text{za vsak j, da je (i, j) povezava})]$ 
+
+3) Slovar sosednosti $G$:
+
+    $G$ je seznam slovarjev dolžine $n$:
+
+    $G[i] = \{j: w(i,j)\ \text{za}\ \forall\ j, \text{da je} (i,j)\ \text{povezava}\}$
+
+    
+    |     |Prostorska zahtevnost|Ali sta $(i,j)$ soseda?   |Sosedi od $i$|
+    | :-: |:-------------------:|:------------------------:|:-----------:| 
+    | 1.  |$O(n^2)$             |$O(1)$                    |$O(n)$|               
+    | 2.  |$O(n + m)$           |$O(\small{deg(i)}) = O(n)$|$O(1)$       | 
+    | 3.  |$O(n+m)$             |$O(1)$                    |$O(n)$/$O(1)$|
+
+Ponovimo naslednje pojme:
+
+Zaporedje točk $v_0 v_1 \dots v_k$ grafa $G$ je **sprehod** dolžine $k$, če $v_i \sim v_{i+1}$ za $0 \leq i < k$, kjer $v_i \sim v_{i+1}$ pomeni, da sta vozlišči sosednji. **Sprehod**, na katerem so vse točke različne, je *pot*. Enostaven sklenjen sprehod z vsaj eno povezavo, na katerem sta enaki le prva in zadnja točka, pa je **cikel** grafa. 
+
+## NALOGA 2: 
+**NAVODILO:**
+Usmerjenemu grafu $G$ z $n$ vozlišči, ki nima ciklov rečemu tudi DAG (directed acyclic graph). Vozlišča takega grafa lahko topološko uredimo. To pomeni, da obstaja zaporedje vozlišč $(v1,v2,\dots,v_n)$, tako da ne obstaja povezava od $v_i$ do $v_j$, če je $j<i$.
+
+Sestavi algoritem, ki najde tako zaporedje. Namig: Katera vozlišča lahko zagotovo damo na prvo mesto v to ureditev? 
+
+**REŠITEV:**
+
+ Na prvo mesto postavimo vozlišča, v katera ne kaže nobena povezava - ta vozlišča imenujemo izvori. Nadaljujemo tako, da iz grafa izbrišemo vozlišča, ki smo jih že postavili v vrsto. Nadalje ponovno v vrsto vstavimo tista vozlišča, v katera ne kaže nobena povezava. Možnih je več topoloških ureditev, torej topološka ureditev v splošnem ni enolično določena. 
+
+ Na spodnji sliki je prikazan primer topološke ureditve grafa:
+ ![Alt text]
+
+DODAJ SLIKO!!!
+``` python
+def topo_sort(G):
+    """
+    Sprejme graf G kot seznam sosednosti in vrne njegovo topološko ureditev.
+    """
+    n = len(G)
+    in_deg = [0] * n # in_deg[i]: število povezav, ki kažejo v i
+    for i in range(n): # Čez vsa vozlišča
+        for j in G[i]: # Čez vse sosede
+            in_deg[j] += 1 # Imamo povezavo od i do j
+        izvori = [i for i in range(n) if in_deg(i) == 0] 
+        rezultat = []
+        while(izvori):
+            izvor = izvori.pop()
+            rezultat.append(izvor)
+            for sosed in G[izvor]:
+                in_deg[sosed] -= 1
+                if in_deg[sosed] == 0:
+                    izvor.append(sosed)
+    return rezultat
+```
+Časovna zahtevnost algoritma je $O(n+m)$.
+- for zanka: $O(n+m)$
+- izvori: $O(n)$
+- while zanka: $O(n+m)$
+
+## NALOGA 3: 
+**NAVODILO:**
+Naj bo sedaj $G$ usmerjen utežen graf brez ciklov. Kako bi izračunal ceno najdaljše poti v tem grafu med vozliščema $s$ in $t$.
+
+**REŠITEV:**
+
+Namig: razmišljaj dinamično
+
+$D[i] =$ najdaljša pot od $i$ do $t$
+
+$D[t] = 0$
+
+$D[i] = max_{(j , \omega) \in G[i]}\{ D[j] + \omega \}$
+
+Graf uredimo topološko, poiščemo kje se $t$ nahaja v topološki ureditvi in seznam $D$ polnimo v obratni topološki ureditvi.
+
+## NALOGA 4: 
+**NAVODILO:**
+**REŠITEV:**
+
+# **VAJE 6 - 22.3.2023**
+
+# **VAJE 7 - 29.3.2023**
+
+# **VAJE 8 - 5.4.2023**
+
+# **VAJE 9 - 12.4.2023**
+
+# **VAJE 10 - 19.4.2023**
