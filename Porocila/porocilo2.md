@@ -38,18 +38,18 @@ Graf $G$ lahko predstavimo na več možnih načinov. Mi smo si pogledali tri naj
 
     $A$ je matrika dimenzij $n \times n$ s sledečim predpisom:
     
-    $$ A[i][j] = \left \{\begin{array}{ll}
+    $$A[i][j] = \left \{\begin{array}{ll}
     \omega(i,j) & , (i,j) \in E \\ 
     \text{None} &\text{, sicer}
     \end{array}
-    \right. $$
+    \right.$$
 
     Primer matrike $A$: 
-    $$ A = \begin{bmatrix}1 & 2 & None & None & \dots & 17\\
+    $$A = \begin{bmatrix}1 & 2 & None & None & \dots & 17\\
     &\\
     &\\
     &\\
-    \end{bmatrix} $$
+    \end{bmatrix}$$
 
 2) **Seznam sosednosti $G$:**
     
