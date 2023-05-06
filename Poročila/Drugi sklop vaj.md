@@ -110,7 +110,7 @@ Za primer grafa G, ki je prikazan spodaj na sliki, funkcija vrne naslednjo reši
 
 
 
-![naloga3_graf_fw.PNG](1_primer1.png)
+![naloga3_graf_fw.PNG](/Datoteke/1_primer1.png)
 
 ```py 
 >>> vhod = [[1,2],[3,5],[1,3],[5],[1],[]]
@@ -119,7 +119,7 @@ Za primer grafa G, ki je prikazan spodaj na sliki, funkcija vrne naslednjo reši
 ```
 Iz slike spodaj opazimo, da funkcija vrne pravilno rešitev. Opazimo, da sta vozlišče 0 in 4 na obratnem mestu, kot pa v izhodu funkcije. To je vseeno, saj nobeno od teh vozlišč nima nobene vhodne povezave. Vidimo, da so vse puščice obrnjene v desno.
 
-![naloga3_graf_fw.PNG](1_primer2.png)
+![naloga3_graf_fw.PNG](/Datoteke/1_primer2.png)
 
 
 
@@ -235,7 +235,7 @@ Potrebujemo eno matriko, v kateri na vsakem koraku k spreminjamo cene, torej pot
 
 _Simuliraj FW algoritem na spodnjem grafu._
 
-![naloga3_graf_fw.PNG](naloga3_graf_fw.PNG)
+![naloga3_graf_fw.PNG](/Datoteke/naloga3_graf_fw.PNG)
 
 _Nato dodamo vozlišče 10 in povezavo (5 -> 10) z utežjo -1 in (10 -> 6) z utežjo 2. Kako uporabil prejšnje rezultate, da bi izračunal nove najkrajše poti?_
 
@@ -471,7 +471,7 @@ Na neki borzi se trgujejo valute po menjalnem tečaju, ki ga podaja tabela R
 
 Za primer si oglejmo naslednjo shemo: 
 
-![7_vaje_naloga4.PNG](7_vaje_naloga4.png)
+![7_vaje_naloga4.PNG](/Datoteke/7_vaje_naloga4.png)
 
 
 Če trgujemo USD -> YEN -> EUR -> USD končamo z 1.44 USD. Tako zaporedje imenujemo arbitraža.
@@ -513,7 +513,7 @@ __PSEVDO KODA:__
 ### __Navodilo__
 Simuliraj Dijkstrov algoritem na spodnjem grafu.
 
-![7_vaje_naloga4.PNG](7_vaje_naloga6.png)
+![7_vaje_naloga4.PNG](/Datoteke/7_vaje_naloga6.png)
 
 ### __Reševanje__
 
@@ -971,7 +971,7 @@ Analiziraj časovne zahtevnosti algoritmov. Primerjaj hitrost med djikstro in BF
 
 ### __Reševanje__
 
-![primerjava_casovne_zahtevnosti.PNG](primerjava_casovne_zahtevnosti.png)
+![primerjava_casovne_zahtevnosti.PNG](/Datoteke/primerjava_casovne_zahtevnosti.png)
 
 Uporabila bi algoritem BFS, saj je v obeh primerih hitrejši.
 ___
