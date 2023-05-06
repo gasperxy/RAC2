@@ -101,7 +101,9 @@ def zabica_iterativno(mocvara):
 
 
 - *iterativna metoda:*  
-  Izračunati moramo vsa stanja: $$ O(n^2) \times O(n) = O(n^3)$$
+  Izračunati moramo vsa stanja: 
+     
+     $$ O(n^2) \times O(n) = O(n^3)$$
     $O(n^2)$ -> število stanj
 
     $O(n)$ -> čas za izračun enega stanja
