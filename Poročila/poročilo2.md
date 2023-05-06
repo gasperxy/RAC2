@@ -151,7 +151,7 @@ Iz prejšnjih vaj obravnavaj, kako razberemo najkrajše poti s pomočjo matrike 
 
 **Floyd Warshall:** 
 
-$D_{i,j} = min\{D_{i,j}(k-1), D_{i,k}(k-1) + D_{k,j}(k-1)$
+$D_{i,j} = min\{D_{i,j}(k-1), D_{i,k}(k-1) + D_{k,j}(k-1)}$
                           
 (*) $D_{i,j}(k-1)$
 
