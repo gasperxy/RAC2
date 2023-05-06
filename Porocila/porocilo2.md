@@ -37,20 +37,19 @@ Graf $G$ lahko predstavimo na več možnih načinov. Mi smo si pogledali tri naj
 1) **Matrika sosednosi $A$ (tabela tabel):**
 
     $A$ je matrika dimenzij $n \times n$ s sledečim predpisom:
-    $$
-    A[i][j] =
-    \begin{cases}
-    \omega(i, j),\ (i, j) \in E\\
-    None;\ \text{sicer}
-    \end{cases}
-    $$
+    
+    $$ A[i][j] = \left \{\begin{array}{ll}
+    \omega(i,j) & , (i,j) \in E \\ 
+    \text{None} &\text{, sicer}
+    \end{array}
+    \right. $$
 
     Primer matrike $A$: 
-    $$A = \begin{pmatrix}1 & 2 & None & None & \dots & 17\\
+    $$ A = \begin{bmatrix}1 & 2 & None & None & \dots & 17\\
     &\\
     &\\
     &\\
-    \end{pmatrix}$$
+    \end{bmatrix} $$
 
 2) **Seznam sosednosti $G$:**
     
@@ -79,7 +78,7 @@ Zaporedje točk $v_0 v_1 \dots v_k$ grafa $G$ je *sprehod* dolžine $k$, če $v_
 ## **Naloga 2**
 
 **OPIS:**
-Usmerjenemu grafu $G$ z $n$ vozlišči, ki nima ciklov rečemu tudi DAG (directed acyclic graph). Vozlišča takega grafa lahko topološko uredimo. To pomeni, da obstaja zaporedje vozlišč $(v1,v2,\dots,v_n)$, tako da ne obstaja povezava od $v_i$ do $v_j$, če je $j<i$.
+Usmerjenemu grafu $G$ z $n$ vozlišči, ki nima ciklov rečemu tudi DAG (directed acyclic graph). Vozlišča takega grafa lahko topološko uredimo. To pomeni, da obstaja zaporedje vozlišč $(v1,v2,\dots,v_n)$, tako da ne obstaja povezava od $v_i$ do $v_j$, če je $j < i$.
 
 Sestavi algoritem, ki najde tako zaporedje. Namig: Katera vozlišča lahko zagotovo damo na prvo mesto v to ureditev? 
 
