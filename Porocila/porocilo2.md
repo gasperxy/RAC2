@@ -39,7 +39,7 @@ Graf $G$ lahko predstavimo na več možnih načinov. Mi smo si pogledali tri naj
     $A$ je matrika dimenzij $n \times n$ s sledečim predpisom:
     
     $$A[i][j] = \left \{\begin{array}{ll}
-    \omega(i,j) & , (i,j) \in E \\ 
+    \omega(i,j) & , (i,j) \in E\\ 
     \text{None} &\text{, sicer}
     \end{array}
     \right.$$
