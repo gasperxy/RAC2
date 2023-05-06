@@ -1098,10 +1098,10 @@ Operacije: 8,2,1,3,7,6, x, x, 5, x, -3, x
 
 ### __Reševanje__
 
-![1_kopica.PNG](1_kopica.png)
-![2_kopica.PNG](2_kopica.png)
-![3_kopica.PNG](3_kopica.png)
-![4_kopica.PNG](4_kopica.png)
+![1_kopica.PNG](/Datoteke/1_kopica.png)
+![2_kopica.PNG](/Datoteke/2_kopica.png)
+![3_kopica.PNG](/Datoteke/3_kopica.png)
+![4_kopica.PNG](/Datoteke/4_kopica.png)
 
                     
 ## <span style="color: red">Naloga 2</span> 
