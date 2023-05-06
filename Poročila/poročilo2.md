@@ -705,10 +705,11 @@ plt.plot(x_os, casi_d1, label='Dijkstra - nedodelan')
 plt.plot(x_os, casi_d2, label='Dijkstra - dodelan')
 plt.plot(x_os, casi_b1, label='BFS - nedodelan')
 plt.plot(x_os, casi_b2, label='BFS - dodelan')
+plt.legend()
 plt.show()
 ```
 
-![Alt text](/Datoteke/graf_8naloga.png)
+![Alt text](/Datoteke/naloga8.png)
 
 # Vaje 9
 **Datum**: 12.4.2023
