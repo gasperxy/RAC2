@@ -10,7 +10,7 @@
 - <i>Vaje 10 (19.04.2023)</i>
 
 
-Vse vaje se nahajajo v folderju <i> Vaje4-8 </i>
+Vse vaje se nahajajo v folderju <i> Vaje5-8 </i>
 
 ## Vaje 5
 
@@ -18,23 +18,35 @@ Vse vaje se nahajajo v folderju <i> Vaje4-8 </i>
 
 Spoznali smo nove grafe (DAG) in rešili 3 naloge pred tablo. na koncu smo reševali naloge iz Scapegoat dreves. Glej [Vaje5](Vaje5-8/Vaje5/Vaje5.md).
 
-## Vaje 2
+## Vaje 6
 
 **Datum:** 22.03.2023
 
 Ogledali smo si BFS in njegovo delovanje. Rešili smo tudi nalogo iz Floyd-Warshallow algoritma. Glej [Vaje6](Vaje5-8/Vaje6/Vaje6.md).
 
-## Vaje 3
+## Vaje 7
 
 **Datum:** 29.03.2023
 
-Ogledali smo si BFS in njegovo delovanje. Rešili smo tudi nalogo iz Floyd-Warshallow algoritma. Glej [Vaje6](Vaje5-8/Vaje6/Vaje6.md).
+Ogledali smo si BFS in njegovo delovanje. Rešili smo tudi nalogo iz Floyd-Warshallow algoritma. Glej [Vaje7](Vaje5-8/Vaje6/Vaje7.md).
 
-## Vaje 4
+## Vaje 8
 
-**Datum:** 29.03.2023
+**Datum:** 05.04.2023
 
-Reševali smo **FW** algoritem. Glej [Vaje7](Vaje5-8/Vaje7/Vaje7.md).
+Reševali smo **FW** algoritem. Glej [Vaje8](Vaje5-8/Vaje7/Vaje8.md).
+
+## Vaje 9
+
+**Datum:** 12.04.2023
+
+Reševali smo naloge iz BFS-ja in Dijkstre. Glej [Vaje9](Vaje5-8/Vaje7/Vaje9.md).
+
+## Vaje 10
+
+**Datum:** 19.04.2023
+
+Reševali smo naloge od zadnjič. Glej [Vaje10](Vaje5-8/Vaje7/Vaje10.md).
 
 ## Komentarji in opombe
 
