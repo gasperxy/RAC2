@@ -328,15 +328,15 @@ Sedaj rekonstruiraj najkrajšo pot med vozliščem 100 in 100000.
 ### Rešitev:
 >Čas med BFS algoritmom in Dijkstro na 'roadNet-TX.txt'
 
-![čas](vaje5-8/slike/čas_Dijkstra_BFS.png)
+![čas](Vaje5-8/slike/čas_Dijkstra_BFS.png)
 
 >Primerjajmo še čas na generiranih grafih
 
-![primerjava](vaje5-8/slike/Primerjava_BFS_Dijkstra.png)
+![primerjava](Vaje5-8/slike/Primerjava_BFS_Dijkstra.png)
 
 >Primerjajmo še čas med navadnima algoritmoma in modificiranima
 
-![primerjava](vaje5-8/slike/Primerjava_mod.png)
+![primerjava](Vaje5-8/slike/Primerjava_mod.png)
 
 >Če nas bi zanimale najkrajše poti od s do t_1, t_2, ..., t_k, bi uporabili kar BFS algoritem, ki ni modificiran. Opazili smo, da je hitrejši kot Djikstra. Modificiran BFS pa ni kaj veliko hitrejši kot navaden BFS, ki nam vrne pot le do enega vozlišča.
 
