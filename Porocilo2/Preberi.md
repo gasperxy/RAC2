@@ -341,7 +341,7 @@ Sedaj rekonstruiraj najkrajšo pot med vozliščem 100 in 100000.
 >Če nas bi zanimale najkrajše poti od s do t_1, t_2, ..., t_k, bi uporabili kar BFS algoritem, ki ni modificiran. Opazili smo, da je hitrejši kot Djikstra. Modificiran BFS pa ni kaj veliko hitrejši kot navaden BFS, ki nam vrne pot le do enega vozlišča.
 
 ---
-# **Vaje 8**
+# **Vaje 9**
 
 ## **Naloga 1**
 
