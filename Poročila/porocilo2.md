@@ -1,4 +1,4 @@
-<h1 align="center"> PRVO POROČILO </h1>
+<h1 align="center"> DRUGO POROČILO </h1>
 
 **Ime:** Aljaž Lukežič
 
