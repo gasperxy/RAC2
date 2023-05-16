@@ -720,7 +720,7 @@ plt.legend()
 # plt.savefig("cas_zahtevnost.pdf")
 plt.show()
 ``` 
-<img src=cas_zah.png  width="80%" height="80%"> 
+<img src=cas_zahevnost.png  width="80%" height="80%"> 
 <img src=cas2.png  width="100%" height="100%"> 
 
 
