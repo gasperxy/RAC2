@@ -275,36 +275,40 @@ def bellman_ford(G, s):
                 return
     return razdalja, predhodnik
 ```
-Sestava grafa in testiranje časovne zahtevnosti algoritma:
+Sestava grafa in testiranje časovne zahtevnosti algoritmov:
 ```python
 import random
-n = int(input('Število vozlišč: '))
-with open("nov_graf.txt", "w") as f:
-    for i in range(n):
-        j = random.randint(1, n//2)
-        for k in range(j):
-            do = random.randint(0, n-1)
-            while do == i:
+#n = int(input('Število vozlišč: '))
+def novi_graf(n):
+    with open("nov_graf.txt", "w") as f:
+        for i in range(n):
+            j = random.randint(1, n//2)
+            for k in range(j):
                 do = random.randint(0, n-1)
-            utez = random.randint(1, 20)
-            line = str(i) +' '+ str(do) +' '+ str(utez)
-            f.write(line)
-            f.write('\n')
-f.close()
+                while do == i:
+                    do = random.randint(0, n-1)
+                utez = random.randint(1, 20)
+                line = str(i) +' '+ str(do) +' '+ str(utez)
+                f.write(line)
+                f.write('\n')
+    f.close()
 
-nov_graf = [[] for _ in range(n)]
-with open('nov_graf.txt', 'r') as f:
-    vrstice = f.readlines()
-    for vrstica in vrstice:
-        podatki = vrstica.strip().split()
-        od = int(podatki[0])
-        do = int(podatki[1])
-        utez = int(podatki[2])
-        nov_graf[od].append((do, utez))
-f.close()
+    nov_graf = [[] for _ in range(n)]
+    with open('nov_graf.txt', 'r') as f:
+        vrstice = f.readlines()
+        for vrstica in vrstice:
+            podatki = vrstica.strip().split()
+            od = int(podatki[0])
+            do = int(podatki[1])
+            utez = int(podatki[2])
+            nov_graf[od].append((do, utez))
+    return nov_graf
 
 from bellman_ford import *
+from dijkstra import *
+from bfs import *
 import time
+from matplotlib import pyplot as plt
 
 def izmeri_cas(fun, G, s):
     zacetek = time.time()
@@ -319,25 +323,26 @@ def oceni_potreben_cas(fun, G, s, k):
     povprecje = vsota / k
     return povprecje
 
-print(oceni_potreben_cas(bellman_ford, nov_graf, 0, 1))
+st_vozlisc = list()
+g_dij = list()
+g_bfs = list()
+g_bellman = list()
+for i in range(1,25):
+    st_vozlisc.append(i*100)
+    g_dij.append(oceni_potreben_cas(dijkstra, novi_graf(i*100), 1, 3))
+    g_bfs.append(oceni_potreben_cas(bfs, novi_graf(i*100), 1, 3))
+    g_bellman.append(oceni_potreben_cas(bellman_ford, novi_graf(i*100), 1, 3))
+plt.plot(st_vozlisc, g_dij, 'b', label = "Dijkstra")
+plt.plot(st_vozlisc, g_bfs, 'g', label = "bfs")
+plt.plot(st_vozlisc, g_bellman, 'r', label = "Bellman Ford")
+plt.xlabel('stevilo vozlisc')
+plt.ylabel('cas izvajanja')
+plt.legend()
+plt.show()
 ```
-Primer:
-```python
-Število vozlišč: 100
-0.004253804683685303
-Število vozlišč: 1000
-0.2574859857559204
-Število vozlišč: 2000
-1.0484524965286255
-Število vozlišč: 3000
-2.435463011264801
-Število vozlišč: 4000
-3.170130431652069
-Število vozlišč: 6000
-7.305637836456299
-Število vozlišč: 8000
-13.199995040893555
-```
+<figure>
+<img src="graf.jpg" height="400" width="500" >
+</figure>
 
 ### Naloga 3
 Časovna zahtevnost Bellman-Ford algoritma je O(V*E). Tako da, če ima graf dovolj povezav se bo čas algoritma zelo hitro večal. V mojem primeru ima vozlišče v grafu v povprečju n/4 povezav. Torej se čas veča kubično. Pri 8000 vozliščih je tako potrebno že več kot 10 sekund, da najdemo vse najkrajše poti.
